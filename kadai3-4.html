@@ -25,7 +25,7 @@
                 // 配列の内容を項目毎に出力
                 for (let i = 0; i < items.length; i++) {
                     const item = items[i];
-                    console.log(`商品番号: {item.id}, 商品名: {item.name}, 金額: {item.price}, 在庫数: {item.stock}`);
+                    console.log(`商品番号: ${item.id}, 商品名: ${item.name}, 金額: ${item.price}, 在庫数: ${item.stock}`);
                 }
                 
                 console.log(""); // 空行の出力
@@ -36,11 +36,11 @@
                  const itembox = no - 1;
                 
                 if (itembox < 0 || itembox >= items.length) {
-                    console.log(`{no}は無効な商品番号です。番号は1～{items.length}で指定してください。`);
+                    console.log(`&{no}は無効な商品番号です。番号は1～${items.length}で指定してください。`);
                 } else {
                     const selectedItem = items[itembox];
                     
-                    console.log(`商品番号: {selectedItem.id}, 商品名: {selectedItem.name}を購入します。`);
+                    console.log(`商品番号: ${selectedItem.id}, 商品名: ${selectedItem.name}を購入します。`);
                     
                     if (selectedItem.stock > 0) {
                         selectedItem.stock--; 
